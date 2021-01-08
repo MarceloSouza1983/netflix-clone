@@ -1,0 +1,153 @@
+/* no CSS pode-se criar variáveis por exemplo para armazenar cores */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    font-family: 'Arial', Times, serif;
+    color: white;
+}
+
+header .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo {
+    margin-left: 10px;
+    color: #d10e0e;
+    font-family: 'Arial Black', Times;
+    font-size: 40px;
+}
+
+header nav a {
+    text-decoration: none;
+    font-size: 20px;
+    color: #AAA;
+    margin-right: 10px;
+}
+
+header nav a:hover {
+    color: #d10e0e;
+}
+
+/* filme principal #E50914 */
+.filme-principal {
+    font-size: 16px;
+    background: linear-gradient(rgba(0,0,0,.50), rgba(0,0,0,.50)100%), url('/img/capa-breaking-bad3.jpg');
+
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.filme-principal .descricao {
+    width: 30%;
+    margin-left: 10px;
+    margin-right: 5px;
+    margin-top: 18%;
+    margin-bottom: 40px;
+    text-align: justify;
+    color: yellowgreen;
+    font-size: 18px;
+}
+
+.box-filme {
+    margin-top: 15px;
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.titulo {
+    margin-left: 48px;
+    margin-top: 8%;
+    font-size: 40px;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+}
+
+.botao {
+    background-color: rgba(0,0,0,.50);
+    border: none;
+    color: white;
+    padding: 15px 20px;
+    margin-left: 5px;
+    margin-right: 20px;
+    margin-bottom: 15px;
+
+    cursor: pointer;
+    transition: .5s ease all;
+}
+
+.botao:hover {
+    background-color:white;
+    color: black;
+}
+
+.botao i {
+    margin-right: 8px;
+}
+
+.owl-theme .item {
+    cursor: pointer;
+}
+
+#owl-demo .item{
+    background: #a1def8;
+    padding: 30px 0px;
+    display: block;
+    margin: 5px;
+    color: #FFF;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    text-align: center;
+  }
+
+  #documentarios .item {
+    background: black;;
+    padding: 10px 0px;
+    display: inline-flex;
+    margin: 5px;
+    color: #FFF;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    text-align: center;
+    width: 100%;
+}
+
+#filmes .item {
+    background: black;
+    padding: 10px 0px;
+    display: inline-flex;
+    margin: 5px;
+    color: #FFF;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    text-align: center;
+    width: 100%;
+}
+
+#series .item {
+    background: black;
+    padding: 10px 0px;
+    display: inline-flex;
+    margin: 5px;
+    color: #FFF;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    text-align: center;
+    width: 100%;
+}

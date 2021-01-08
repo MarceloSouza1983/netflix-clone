@@ -1,0 +1,50 @@
+$('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:15,
+    nav:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:5
+        }
+    }
+})
+
+$('#filmes').owlCarousel({
+    loop:true,
+    margin:15,
+    nav:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:5
+        }
+    }
+})
+
+$('#documentarios').owlCarousel({
+    loop:true,
+    margin:15,
+    nav:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:5
+        }
+    }
+})

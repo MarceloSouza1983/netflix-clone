@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
+
+  <!-- owl css -->
+  <link rel="stylesheet" href="./css/owl/owl.carousel.min.css">
+  <link rel="stylesheet" href="./css/owl/owl.theme.default.min.css">
+
+  <!-- responsividade -->
+  <link rel="stylesheet" href="./css/responsive.css">
+
+  <title>Netflix Clone</title>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <h2 class="logo">NETFLIX</h2>
+        <nav>
+          <a href="#">Início</a>
+          <a href="#" onclick="playSeries()">Séries</a>
+          <a href="#" onclick="playFilmes()">Filmes</a>
+          <a href="#" onclick="playDocumentarios()">Documentários</a>
+        </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="filme-principal">
+      <div class="container">
+        <h3 class="titulo">BREAKING BAD</h3>
+        <p class="descricao">Walter, é um professor de química que trabalha em uma escola no Novo México. 
+          Para atender às necessidades de sua esposa Skyler e de seu filho deficiente físico, ele tem que 
+          trabalhar duplamente. Sua vida complica-se quando ele descobre que está sofrendo de um câncer de 
+          pulmão incurável. Para aumentar rapidamente a quantidade de dinheiro que deixaria para sua família, 
+          Walter usa seu conhecimento de química para fabricar e vender metanfetamina.</p>
+      </div>
+      <div class="botoes">
+        <button role="button" id="assistir" class="botao" onclick="getFiles()" target="blank">
+          <i class="fas fa-play"></i>ASSISTIR AGORA</button>
+        <button role="button" id="info" class="botao">
+          <i class="fas fa-info-circle"></i>MAIS INFORMAÇÕES</button>
+      </div>
+
+    </div>
+  </main>
+  <!--
+      https://www.youtube.com/watch?v=bOP07cRPpTw&t=3s - 12 heróis
+      https://www.youtube.com/watch?v=v4hP3xyaM-E - 2012
+      https://www.youtube.com/watch?v=LBRJhII2wu8 - mulan
+      https://www.youtube.com/watch?v=LZl69yk5lEY - mask
+      https://www.youtube.com/watch?v=oByMeAfwARs - road house
+  -->
+  <div id="owl-demo" class="owl-carousel owl-theme">
+  </div>
+    <div class="owl-carousel owl-theme" id="documentarios"></div>
+    <div class="owl-carousel owl-theme" id="filmes"></div>
+    <div class="owl-carousel owl-theme" id="series"></div>
+
+    <div class="carrosel-filmes">
+    <div id="carousel1" class="owl-carousel owl-theme">
+      <div class="item" onclick="assistir()" id="documentarios1"><img src="./img/documentarios1.jpg"></div>
+      <div class="item" onclick="assistir()" id="documentarios2"><img src="./img/documentarios2.jpg"></div>
+      <div class="item" onclick="assistir()" id="documentarios3"><img src="./img/documentarios3.jpg"></div>
+      <div class="item" onclick="assistir()" id="documentarios4"><img src="./img/documentarios4.jpg"></div>
+  </div>
+  
+  <div id="carousel2" class="owl-carousel owl-theme">
+    <div class="item" onclick="assistir()" id="documentarios1"><img src="./img/filmes1.jpg"></div>
+    <div class="item" onclick="assistir()" id="documentarios2"><img src="./img/filmes2.jpg"></div>
+    <div class="item" onclick="assistir()" id="documentarios3"><img src="./img/filmes3.jpg"></div>
+    <div class="item" onclick="assistir()" id="documentarios4"><img src="./img/filmes4.jpg"></div>
+  </div>
+  
+  <div id="carousel3" class="owl-carousel owl-theme">
+    <div class="item" onclick="assistir()" id="series1"><img src="./img/series1.jpg"></div>
+    <div class="item" onclick="assistir()" id="series2"><img src="./img/series2.jpg"></div>
+    <div class="item" onclick="assistir()" id="series3"><img src="./img/series3.jpg"></div>
+    <div class="item" onclick="assistir()" id="series4"><img class="box-filme" src="./img/series4.jpg"></div>
+  </div>
+</div>
+
+  <!-- <div class="carrosel-filmes">
+    <div class="owl-carousel owl-theme">
+      <div  class="item" onclick="loadPatternImages()" id="mini1">
+        <img class="box-filme" src="./img/mini1.jpg">
+      </div>  onmouseenter="showCoords(event)"
+      <div class="item" id="mini2">
+        <img class="box-filme" src="./img/mini2.jpg">
+      </div>
+      <div class="item" id="mini3">
+        <img class="box-filme" src="./img/mini3.jpg">
+      </div>
+      <div class="item" id="mini4">
+        <img class="box-filme" src="./img/mini4.jpg" >
+      </div>
+      <div class="item" id="mini5">
+        <img class="box-filme" src="./img/mini5.jpg">
+      </div>
+      <div class="item" id="mini6">
+        <img class="box-filme" src="./img/mini6.jpg">
+      </div>
+    </div>
+  </div> -->
+
+  <script src="https://kit.fontawesome.com/2c36e9b7b1.js"></script>
+  <script src="./js/owl/jquery.min.js"></script>
+  <script src="./js/owl/owl.carousel.min.js"></script>
+  <script src="./js/carrousel.js"></script>
+  <script src="./js/script2.js"></script>
+</body>
+
+</html>
