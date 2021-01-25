@@ -46,6 +46,9 @@ jQuery.get('./js/arquivo.txt', function (data) {
 	//$('#player').text(data);
 });
 
+var coletaneaDocumentos;
+var categoria = "";
+
 var descDocumentarios = new Array();
 descDocumentarios[1] = "A vida da princesa Diana como você nunca viu: com imagens de arquivo e gravações pessoais, conheça o lado informal da vida na realeza.";
 descDocumentarios[2] = "O Dilema das Redes nos mostra como os magos da tecnologia possuem o controle sobre a maneira em que pensamos, agimos e vivemos. Frequentadores do Vale do Silício revelam como as plataformas de mídias sociais estão reprogramando a sociedade e sua forma de enxergar a vida.";
@@ -142,8 +145,6 @@ descSeries[28] = "<br>Liam McIntyre<br>Andy Whitfield<br>Lucy Lawless<br>Manu Be
 descSeries[29] = "<br><br>Andrew Lincoln<br>Norman Reedus<br>Melissa McBride";
 descSeries[30] = "<br><br>Millie Bobby Brown<br>Finn Wolfhard<br>Winona Ryder";
 
-var coletaneaDocumentos;
-var categoria = "", categoria1 = "";
 var contadorDocumentarios = 0;
 var contadorFilmes = 0;
 var contadorSeries = 0;
@@ -163,7 +164,7 @@ function escrever(titulo, descricao) { // urlVideo
 function getInfo(informacao) {
 	var div = document.getElementById("divDescricao");
 	informacao = coletaneaDocumentos;
-	div.innerHTML = "<h2 class='titulo-elenco'>" + "Elenco:</h2><br>" + "<h3 class='elenco'>" + informacao + "</h3>";
+	div.innerHTML = "<h2 class='titulo-elenco'>" + "Elenco:</h2><br>" + "<h3 class='elenco'>" + informacao + "</h3>"; //"<p class='descricao'>" + informacao + "</p>";
 }
 
 function playDocumentarios() {
@@ -246,31 +247,12 @@ function playDocumentarios() {
 				carousel1.trigger('next.owl.carousel');
 			});
 
-			/*$('.owl-item').on('click', function(e) {
-				var item = $(this).index();
-				$('.owl-item').eq(item).addClass('carousel11');
-				$('.owl-item').eq(item+1).addClass('carousel11');
-				$('.owl-item').eq(item+2).addClass('carousel11');
-				$('.owl-item').eq(item+3).addClass('carousel11');
-				$('.owl-item').eq(item+4).addClass('carousel11');
-				$('.owl-item').eq(item+5).addClass('carousel11');
-				
-					var contador = item - 5;
-				
-					if (contador === 0) {
-						contador = 10;
-						$('.carousel11').trigger('to.owl.carousel', contador);
-					} else {
-						$('.carousel11').trigger('to.owl.carousel', contador);
-					}
-				
-			}); */
-
 		})
 
 	} else {
 		contadorDocumentarios++;
 		setFilmes(categoria);
+
 	}
 }
 
@@ -353,8 +335,8 @@ function playFilmes() {
 					document.getElementById("filme-background").style.backgroundImage = "url(" + "./img/filmes" + contador + "_wallpaper.jpg)";
 
 					var resultado = (document.getElementById("filme-background").style.backgroundImage).toString();
-					categoria1 = resultado.substring(resultado.lastIndexOf('/') + 1, resultado.lastIndexOf('_'));
-					console.log(categoria1);
+					var categoria1 = resultado.substring(resultado.lastIndexOf('/') + 1, resultado.lastIndexOf('_'));
+					//console.log(categoria);
 
 					escrever(descFilmes[contador + 10], descFilmes[contador]);
 					coletaneaDocumentos = descFilmes[contador + 20];
@@ -362,8 +344,8 @@ function playFilmes() {
 					document.getElementById("filme-background").style.backgroundImage = "url(" + "./img/filmes" + contador + "_wallpaper.jpg)";
 
 					var resultado = (document.getElementById("filme-background").style.backgroundImage).toString();
-					categoria1 = resultado.substring(resultado.lastIndexOf('/') + 1, resultado.lastIndexOf('_'));
-					console.log(categoria1);
+					var categoria1 = resultado.substring(resultado.lastIndexOf('/') + 1, resultado.lastIndexOf('_'));
+					//console.log(categoria);
 
 					escrever(descFilmes[contador + 10], descFilmes[contador]);
 					coletaneaDocumentos = descFilmes[contador + 20];
@@ -378,36 +360,6 @@ function playFilmes() {
 			$("#btnNext2").on('click', function () {
 				carousel2.trigger('next.owl.carousel');
 			});
-
-			/*$('#filmes').on('initialized.owl.carousel translate.owl.carousel', function(e){
-				idx = e.item.index;
-				$('.owl-item').eq(idx).removeClass('cloned');
-				//$('.owl-item').eq(idx-1).addClass('carousel2');
-				//$('.owl-item').eq(idx+1).addClass('carousel2');
-			});*/
-
-			$('.owl-item').on('click', function() {
-				
-					var item = $(this).index();
-					$('.owl-item').eq(item).removeClass('cloned');
-					$('.owl-item').eq(item+1).removeClass('cloned');
-					$('.owl-item').eq(item+2).removeClass('cloned');
-					$('.owl-item').eq(item+3).removeClass('cloned');
-					$('.owl-item').eq(item+4).removeClass('cloned');
-					var contador = item - 5;
-				
-					if (contador === 0) {
-						contador = 10;
-						carousel2.trigger('to.owl.carousel', contador);
-						//$('.owl-carousel').trigger('to.owl.carousel', contador);
-					} else {
-					carousel2.trigger('to.owl.carousel', contador);
-						//$('.owl-carousel').trigger('to.owl.carousel', contador);
-					}
-				
-			});
-
-
 		})
 
 	} else {
