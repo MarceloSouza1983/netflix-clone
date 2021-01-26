@@ -42,7 +42,7 @@ loadWallpaperSeries();
 
 jQuery.get('./js/arquivo.txt', function (data) {
 
-	$('#player').html(data + "<br> Vai Corinthians!!!");
+	//$('#player').html(data + "<br> Vai Corinthians!!!");
 	//$('#player').text(data);
 });
 
@@ -77,6 +77,16 @@ descDocumentarios[27] = "<br><br>Deepak Chopra<br>Joseph Dispenza<br>Kelly Turne
 descDocumentarios[28] = "<br><br>Pope Francis<br>Ignazio Oliva<br>Sister María<br>Eufemia Goycoechea";
 descDocumentarios[29] = "<br><br>Gert Westphal<br>Stephen Murray<br>Artur Axmann";
 descDocumentarios[30] = "<br><br>Ronnie Coleman<br>Jay Cutler<br>Rich Gaspari";
+descDocumentarios[31] = "https://www.youtube.com/embed/JoH2-fSgbSE";
+descDocumentarios[32] = "https://www.youtube.com/embed/xRJTx66HYt4";
+descDocumentarios[33] = "https://www.youtube.com/embed/yOCjrGevsdo";
+descDocumentarios[34] = "https://www.youtube.com/embed/HlRlskfI35w";
+descDocumentarios[35] = "https://www.youtube.com/embed/SDE-ZFDRV0E";
+descDocumentarios[36] = "https://www.youtube.com/embed/tbpGAowldac";
+descDocumentarios[37] = "https://www.youtube.com/embed/s5Hpm-6Inxc";
+descDocumentarios[38] = "https://www.youtube.com/embed/yA1qDz1OLKk";
+descDocumentarios[39] = "https://www.youtube.com/embed/rfxi5os43M0";
+descDocumentarios[40] = "https://www.youtube.com/embed/HqV1nhrtEOw";
 
 var descFilmes = new Array();
 descFilmes[1] = "Após os atentados de 11 de setembro de 2001, o capitão Mitch Nelson (Chris Hemsworth), decide abandonar o posto de escritório recém-conquistado para retomar à ação em uma missão extremamente perigosa. Ao lado de seu batalhão das Forças Especiais dos Estados Unidos da América (EUA), ele assume a responsabilidade de formar uma unidade especial que será a primeira equipe a operar no Afeganistão após os ataques ao World Trade Center, para derrotar o Talibã e seus aliados. Baseado em fatos reais.";
@@ -109,6 +119,16 @@ descFilmes[27] = "<br><br>Leandro Hassum<br>Marcius Melhem<br>Steve Carell";
 descFilmes[28] = "<br><br>Tom Hanks<br>Michael Clarke Duncan<br>David Morse";
 descFilmes[29] = "<br><br>Mike Myers<br>Eddie Murphy<br>Antonio Banderas";
 descFilmes[30] = "<br><br>Michael B. Jordan<br>Sylvester Stallone<br>Tessa Thompson";
+descFilmes[31] = "http://www.youtube.com/embed/bOP07cRPpTw";
+descFilmes[32] = "https://www.youtube.com/embed/v4hP3xyaM-E";
+descFilmes[33] = "https://www.youtube.com/embed/KK8FHdFluOQ";
+descFilmes[34] = "https://www.youtube.com/embed/oByMeAfwARs";
+descFilmes[35] = "https://www.youtube.com/embed/E4YA2mQuVZw";
+descFilmes[36] = "https://www.youtube.com/embed/MtdjFZMgpxo";
+descFilmes[37] = "https://www.youtube.com/embed/0OTViVgy7N0";
+descFilmes[38] = "https://www.youtube.com/embed/Ki4haFrqSrw";
+descFilmes[39] = "https://www.youtube.com/embed/io9gHv6WaAQ";
+descFilmes[40] = "https://www.youtube.com/embed/8VTQPTu6AQU";
 
 var descSeries = new Array();
 descSeries[1] = "Lucifer Morningstar, o Senhor do Inferno, resolve tirar férias em Los Angeles. Lá, ele abre uma casa noturna chamada 'Lux' e passa a desfrutar de tudo o que mais gosta: vinho, mulheres e excessos. Sua nova rotina se complica quando uma estrela do pop é brutalmente assassinada diante de seus olhos. Pela primeira vez em mais de 10 milhões de anos, Lucifer sente despertar em seu interior um desejo de justiça e resolve punir os responsáveis pelo crime.";
@@ -141,8 +161,18 @@ descSeries[27] = "<br><br>Úrsula Corberó<br>Álvaro Morte<br>Itziar Ituño";
 descSeries[28] = "<br>Liam McIntyre<br>Andy Whitfield<br>Lucy Lawless<br>Manu Bennett<br>Dustin Clare";
 descSeries[29] = "<br><br>Andrew Lincoln<br>Norman Reedus<br>Melissa McBride";
 descSeries[30] = "<br><br>Millie Bobby Brown<br>Finn Wolfhard<br>Winona Ryder";
+descSeries[31] = "https://www.youtube.com/embed/X4bF_quwNtw";
+descSeries[32] = "https://www.youtube.com/embed/0ZXdPhfMbAw";
+descSeries[33] = "https://www.youtube.com/embed/f5av6OqFwz0";
+descSeries[34] = "https://www.youtube.com/embed/HhesaQXLuRY";
+descSeries[35] = "https://www.youtube.com/embed/dFZC-_T_irA";
+descSeries[36] = "https://www.youtube.com/embed/oVzVdvGIC7U";
+descSeries[37] = "https://www.youtube.com/embed/rLTD_AD91uE";
+descSeries[38] = "https://www.youtube.com/embed/ko6auA8PrUI";
+descSeries[39] = "https://www.youtube.com/embed/R1v0uFms68U";
+descSeries[40] = "https://www.youtube.com/embed/0hmzL7qHA1M";
 
-var coletaneaDocumentos;
+var coletaneaDocumentos, coletaneaDocumentos2;
 var categoria = "", categoria1 = "";
 var contadorDocumentarios = 0;
 var contadorFilmes = 0;
@@ -154,7 +184,7 @@ $(document).ready(function () {
 
 })
 
-function escrever(titulo, descricao) { // urlVideo
+function escrever(titulo, descricao) {
 	var div = document.getElementById("divDescricao");
 
 	div.innerHTML = "<h3 class='titulo'>" + titulo + "</h3>" + "<p class='descricao'>" + descricao + "</p>";
@@ -166,8 +196,27 @@ function getInfo(informacao) {
 	div.innerHTML = "<h2 class='titulo-elenco'>" + "Elenco:</h2><br>" + "<h3 class='elenco'>" + informacao + "</h3>";
 }
 
+function playFiles(link) {
+ 
+	link = coletaneaDocumentos2;
+	var catMovie = document.getElementById("player");
+		if (catMovie.style.display != "block") {
+			catMovie.style.display = "block";
+			
+			if (link == "https://www.youtube.com/embed/SDE-ZFDRV0E") {
+				$('#caixa').attr('src', link + "?rel=0&autoplay=1&start=6&enablejsapi=1");
+			} else {
+				$('#caixa').attr('src', link + "?rel=0&autoplay=1&enablejsapi=1");
+			}
+		} else {
+			pararVideo();
+		}
+
+}
+
 function playDocumentarios() {
 
+	pararVideo();
 	categoria = "documentarios";
 
 	//var backgroundImage = document.getElementById(".filme-principal");
@@ -180,6 +229,7 @@ function playDocumentarios() {
 
 		escrever(descDocumentarios[11], descDocumentarios[1]);
 		coletaneaDocumentos = descDocumentarios[21];
+		coletaneaDocumentos2 = descDocumentarios[31];
 		contadorDocumentarios++;
 
 		setFilmes(categoria);
@@ -230,10 +280,14 @@ function playDocumentarios() {
 					document.getElementById("filme-background").style.backgroundImage = "url(" + "./img/documentarios" + contador + "_wallpaper.jpg)";
 					escrever(descDocumentarios[contador + 10], descDocumentarios[contador]);
 					coletaneaDocumentos = descDocumentarios[contador + 20];
+					coletaneaDocumentos2 = descDocumentarios[contador + 30];
+					pararVideo();
 				} else {
 					document.getElementById("filme-background").style.backgroundImage = "url(" + "./img/documentarios" + contador + "_wallpaper.jpg)";
 					escrever(descDocumentarios[contador + 10], descDocumentarios[contador]);
 					coletaneaDocumentos = descDocumentarios[contador + 20];
+					coletaneaDocumentos2 = descDocumentarios[contador + 30];
+					pararVideo();
 				}
 
 			});
@@ -276,12 +330,15 @@ function playDocumentarios() {
 
 function playFilmes() {
 
+	pararVideo();
+
 	categoria = "filmes";
 	//console.log(categoria = $('filme-background').css('background-image'));
 
 	if (contadorFilmes === 0) {
 		escrever(descFilmes[11], descFilmes[1]);
 		coletaneaDocumentos = descFilmes[21];
+		coletaneaDocumentos2 = descFilmes[31];
 		contadorFilmes++;
 		setFilmes(categoria);
 
@@ -358,6 +415,8 @@ function playFilmes() {
 
 					escrever(descFilmes[contador + 10], descFilmes[contador]);
 					coletaneaDocumentos = descFilmes[contador + 20];
+					coletaneaDocumentos2 = descFilmes[contador + 30];
+					pararVideo();
 				} else {
 					document.getElementById("filme-background").style.backgroundImage = "url(" + "./img/filmes" + contador + "_wallpaper.jpg)";
 
@@ -367,6 +426,8 @@ function playFilmes() {
 
 					escrever(descFilmes[contador + 10], descFilmes[contador]);
 					coletaneaDocumentos = descFilmes[contador + 20];
+					coletaneaDocumentos2 = descFilmes[contador + 30];
+					pararVideo();
 				}
 
 			});
@@ -399,9 +460,11 @@ function playFilmes() {
 					if (contador === 0) {
 						contador = 10;
 						carousel2.trigger('to.owl.carousel', contador);
+						console.log("Categoria é: " + categoria)
 						//$('.owl-carousel').trigger('to.owl.carousel', contador);
 					} else {
 					carousel2.trigger('to.owl.carousel', contador);
+					console.log("Categoria é: " + categoria)
 						//$('.owl-carousel').trigger('to.owl.carousel', contador);
 					}
 				
@@ -418,12 +481,15 @@ function playFilmes() {
 
 function playSeries() {
 
+	pararVideo();
+
 	categoria = "series";
 
 	if (contadorSeries === 0) {
 		document.getElementById("filme-background").style.backgroundImage = "url(./img/series1_wallpaper.jpg)";
 		escrever(descSeries[11], descSeries[1]);
 		coletaneaDocumentos = descSeries[21];
+		coletaneaDocumentos2 = descSeries[31];
 		contadorSeries++;
 		setFilmes(categoria);
 
@@ -473,10 +539,14 @@ function playSeries() {
 					document.getElementById("filme-background").style.backgroundImage = "url(" + "./img/series" + contador + "_wallpaper.jpg)";
 					escrever(descSeries[contador + 10], descSeries[contador]);
 					coletaneaDocumentos = descSeries[contador + 20];
+					coletaneaDocumentos2 = descSeries[contador + 30];
+					pararVideo();
 				} else {
 					document.getElementById("filme-background").style.backgroundImage = "url(" + "./img/series" + contador + "_wallpaper.jpg)";
 					escrever(descSeries[contador + 10], descSeries[contador]);
 					coletaneaDocumentos = descSeries[contador + 20];
+					coletaneaDocumentos2 = descSeries[contador + 30];
+					pararVideo();
 				}
 
 			});
@@ -501,12 +571,15 @@ function clicarEsquerda() {
 	if (categoria === "documentarios") {
 		var botao = document.getElementById("btnPrev1");
 		botao.click();
+		pararVideo();
 	} else if (categoria === "filmes") {
 		var botao = document.getElementById("btnPrev2");
 		botao.click();
+		pararVideo();
 	} else {
 		var botao = document.getElementById("btnPrev3");
 		botao.click();
+		pararVideo();
 	}
 }
 
@@ -514,12 +587,15 @@ function clicarDireita() {
 	if (categoria === "documentarios") {
 		var botao = document.getElementById("btnNext1");
 		botao.click();
+		pararVideo();
 	} else if (categoria === "filmes") {
 		var botao = document.getElementById("btnNext2");
 		botao.click();
+		pararVideo();
 	} else {
 		var botao = document.getElementById("btnNext3");
 		botao.click();
+		pararVideo();
 	}
 }
 $(document).keydown(function (event) {
@@ -573,6 +649,16 @@ function setFilmes(categoria) {
 		next3.style.display = "block";
 	}
 
+}
+
+function pararVideo() {
+
+	var catMovie = document.getElementById("player");
+	catMovie.style.display = "none";
+
+	var frame = document.getElementById("caixa");
+	frame.contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*');
+	
 }
 
 // KEY_ENTER = 13; down = 40
